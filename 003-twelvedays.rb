@@ -1,20 +1,18 @@
-day = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth',
-'tenth', 'eleventh', 'twelfth']
+def twelveDays(num)
+	daynames = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"]
+	gifts = ["Partridge in a pear tree", "Turtle Doves", "French Hens", "Calling Birds", "Goldeeeeeeen Riiiinggggsss", "Geese a Laying","Geese a Laying", "Maids a Milking", "Ladies Dancing", "Lords a Leaping", "Pipers Piping", "Drummers Drumming"]
 
-songElements = ['1 Partridge in a Pear Tree', '2 Turtle Doves', '3 French Horns', 
-'4 Calling Birds', '5 Golden Rings', '6 Geese a Laying', '7 Swans a Swiming']
-
-currentSong = []
-
-#def christmasSong(song)
-	day.each do |day|
-		puts "On the " + day + " day of Christmas \nmy true love sent to me:"
-		songElements.each do |song|
-			puts song
-		end
+	i = 1
+	while i <= num do
+		puts "On the " + daynames[i-1] + " day of Christmas \nmy true love sent to me:"
+		j=i
+			while j>0 do
+			puts "#{j} " + gifts[j-1]
+			j -=1
+			end
+		i +=1
+		puts "\n"
 	end
+end
 
-
-#end
-
-#christmasSong(day)
+twelveDays(12)
