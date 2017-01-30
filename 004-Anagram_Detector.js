@@ -1,8 +1,8 @@
 function anagramDetector(words) {
 	var word1 = words.slice(0, 1).toString().toLowerCase();
 	var word2 = words.slice(1).toString().toLowerCase();
-	var firstword = word1.replace(" ","").split("").sort().join();
-	var secondword = word2.replace(" ","").split("").sort().join();
+	var firstword = word1.replace(" ","").replace("'","").split("").sort().join();
+	var secondword = word2.replace(" ","").replace("'","").split("").sort().join();
 	if (secondword == firstword) {
 		return true;
 	} else {
@@ -11,11 +11,11 @@ function anagramDetector(words) {
 	return words;
 }
 
-var test1 = ["wisdom", "mid sow"];
-var test2 = ["Seth Rogan", "Gathers No"]
+// build loop for all words
+var input = [["wisdom", "mid sow"], ["Seth Rogan", "Gathers No"], ["Reddit", "Eat Dirt"],
+["Schoolmaster", "The classroom"], ["Astronomers", "Moon starer"], ["Vacation Times", "I'm Not as Active"]]
 
-testWord = anagramDetector(test1);
-testWord2 = anagramDetector(test2);
-
-console.log(testWord);
-console.log(testWord2);
+for (var x = 0; x < input.length; x++) {
+	test = anagramDetector(input[x]);
+	console.log(test);
+}
