@@ -2,10 +2,10 @@ require 'net/http'
 require 'json'
 require 'pry'
 
-puts "Enter the first pokemon type:"
+puts "Enter # of the first pokemon:"
 pokemon1 = gets.chomp
 
-puts "Enter the second pokemon type:"
+puts "Enter # of the second pokemon:"
 pokemon2 = gets.chomp
  
 def getPokemonSpeed(pokemon)
