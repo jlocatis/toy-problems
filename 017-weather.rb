@@ -12,7 +12,6 @@ puts "Enter your current longitude:"
 longitude = gets.chomp
 
 def getWeather(latitude, longitude)
-	poke_info = []
 	weather_info = 'https://api.darksky.net/forecast/9bb3af1d238b10e89a37f0d9c510dd1e/' + latitude + ',' + longitude
 	uri = URI(weather_info)
 	response = Net::HTTP.get(uri)
